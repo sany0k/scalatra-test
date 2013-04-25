@@ -1,12 +1,16 @@
 -@ val title: String
--@ val headline: String = title
 -@ val body: String
 
 !!! 5
 html
   head
     title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="utf-8")
+    link(href="css/bootstrap.min.css" rel="stylesheet" media="screen")
+    link(href="css/bootstrap-responsive.min.css" rel="stylesheet")
   body
     #content
-      h1= headline
       != body
+      script(src="js/jquery-2.0.0.min.js")
+      script(src="js/bootstrap.min.js")

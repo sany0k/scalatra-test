@@ -1,0 +1,16 @@
+- attributes("title") = "Система обработки контента"
+
+div(class="container-fluid")
+  div(class="row-fluid")
+    div(class="span12")
+      h3(class="text-center")= "Поиск по обработанному контенту"
+      p= "Информация о системе."
+      div(class="alert alert-info")
+        h4= "Внимание!"
+        strong= "Поиск осуществляется только по обработанному контенту."
+      form(class="form-search form-inline")
+        input(type="text" class="input-large search-query")
+        button(type="submit" class="btn")= "Найти"
+      div(class="progress progress-info progress-striped active" style="display:none;")
+        div(class="bar" style="width: 60%;")
+      div(class="finded")
