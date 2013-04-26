@@ -16,10 +16,10 @@ class IndexServlet extends ScalatraStack {
     val list = Model.getAll
     <html>
       <body>
-        {for (i:Node <- list) yield i.getProperty("name")+" "}
+        {for (i: Node <- list) yield i.getProperty("name") + " "}
       </body>
     </html>
 
   }
-  
+
 }
