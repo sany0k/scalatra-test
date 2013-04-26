@@ -7,7 +7,7 @@ class IndexServlet extends ScalatraStack {
 
   get("/") {
     contentType = "text/html"
-    jade("index.jade")
+    jade("index.jade", "query" -> params.getOrElse("query", ""))
   }
   
 }

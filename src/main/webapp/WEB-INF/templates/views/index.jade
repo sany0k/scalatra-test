@@ -1,4 +1,5 @@
 - attributes("title") = "Система обработки контента"
+-@ val query: String
 
 .container-fluid
   .row-fluid
@@ -9,8 +10,11 @@
         h4 Внимание!
         strong Поиск осуществляется только по обработанному контенту.
       form.form-search.form-inline
-        input.input-large.search-query(type="text")
+        input.input-large.search-query(type="text" name="query" value=query)
         button.btn(type="submit") Найти
       .progress.progress-info.progress-striped.active(style="display:none")
         .bar(style="width:60%")
       .finded
+        - if (!query.isEmpty)
+          p Вы пытались найти:
+        p= query
